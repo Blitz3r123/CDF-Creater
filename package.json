@@ -1,0 +1,17 @@
+{
+  "name": "cdf-grapher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Kaleem Peeroo",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^8.1.1"
+  },
+  "dependencies": {
+    "csv-parse": "^4.8.8"
+  }
+}
