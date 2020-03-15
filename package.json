@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "build": "npx electron-packager ./ --all"
+    "build": "npx electron-packager ./ --platform=darwin"
   },
   "author": "Kaleem Peeroo",
   "license": "MIT",
   "devDependencies": {
     "electron": "^8.1.1",
-    "electron-packager": "^14.2.1"
+    "electron-packager": "^14.2.1",
+    "r-script": "0.0.4"
   },
   "dependencies": {
     "csv-parse": "^4.8.8"

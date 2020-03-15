@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const parse = require('csv-parse');
 const child_process = require('child_process');
+const R = require('r-script');
 
 document.getElementById('file-input').addEventListener('change', e => handleFileChoice(e));
 
@@ -29,27 +30,46 @@ function runScript(){
     $('#loader').show();
 
     let output = document.querySelector('#script-output').value;
-    child_process.exec('Rscript script.R', (err, stdout, stderr) => {
+    var out = R('script.R').call((err, d) => {
         if(err){
             console.log(err);
             $("#err-msg").show();
             document.querySelector('#err-msg-output').textContent = err;
-        }
+            
+            $('#loader').hide();
+        }else{
+            console.log(d);
 
-        if(stdout){
-            console.log(stdout);
             let img = document.createElement('img');
             img.src = 'cdf.png';
             document.querySelector('#img-output').appendChild(img);
-            // $("#alert-msg").show();
+            
+            $('#loader').hide();
         }
-
-        if(stderr){
-            console.log(stderr);
-        }
-
-        $('#loader').hide();
     });
+
+
+    // child_process.exec('Rscript script.R', (err, stdout, stderr) => {
+    //     if(err){
+    //         console.log(err);
+    //         $("#err-msg").show();
+    //         document.querySelector('#err-msg-output').textContent = err;
+    //     }
+
+    //     if(stdout){
+    //         console.log(stdout);
+    //         let img = document.createElement('img');
+    //         img.src = 'cdf.png';
+    //         document.querySelector('#img-output').appendChild(img);
+    //         // $("#alert-msg").show();
+    //     }
+
+    //     if(stderr){
+    //         console.log(stderr);
+    //     }
+
+    //     $('#loader').hide();
+    // });
 }
 
 function handleScript(heading, pathval){
