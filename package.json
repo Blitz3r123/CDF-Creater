@@ -1,5 +1,5 @@
 {
-  "name": "cdf-grapher",
+  "name": "cdf-creater",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,6 +15,10 @@
     "r-script": "0.0.4"
   },
   "dependencies": {
-    "csv-parse": "^4.8.8"
+    "csv-parse": "^4.8.8",
+    "electron": "^8.1.1",
+    "electron-packager": "^14.2.1",
+    "r-script": "0.0.4",
+    "recursive-readdir": "^2.2.2"
   }
 }

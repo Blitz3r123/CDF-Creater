@@ -4,5 +4,5 @@ node_modules
 WORKSPACE.code-workspace
 ./src/
 src
-./cdf-grapher-darwin-x64
-cdf-grapher-darwin-x64
+./cdf-creater-darwin-x64
+cdf-creater-darwin-x64

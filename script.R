@@ -1,4 +1,4 @@
-data <- read.csv("/Users/kaleem/Documents/Tests/Set 10 [Incomplete]/1 Pub 1 Sub/1.1 Best Effort Multicast/Run 3/pub.csv")
-png(file="cdf.png")
-plot.ecdf(data$One-Way Latency (us):, xlab="One-Way Latency (us):")
+data <- read.csv("/Users/kaleem/Documents/Tests/Set 15 [5 Pub Tests]/Reliable Unicast/5 Publishers/5 Subscribers/Run 3/pub.csv")
+png(file="pub.png")
+plot.ecdf(data$OneWayLatencyus, xlab="OneWayLatencyus Latency")
 dev.off()
