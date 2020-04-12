@@ -10,6 +10,8 @@ $('#complete-message').hide();
 document.getElementById('file-input').addEventListener('change', e => handleFileChoice(e));
 
 function handleFileChoice(event){
+    
+    fs.writeFileSync(path.join(__dirname, 'test.txt'), 'hello world');
     $('#file-input').hide();
     $('#loader').show();
     
@@ -79,10 +81,19 @@ function handleFileChoice(event){
 
         }
 
-        // shell.showItemInFolder(files[0]);
-
+        
         $('#loader').hide();
         $('#complete-message').show();
+        
+        if(reloadOnFinishValue){
+            location.reload();
+        }
+        
+        if(showFileOnFinishValue){
+            shell.showItemInFolder(files[0]);
+        }
+
+
     }, 500);
     
 }
