@@ -83,7 +83,8 @@ function handleFileChoice(event){
 
         
         $('#loader').hide();
-        $('#complete-message').show();
+        // $('#complete-message').show();
+        $('#file-input').show();
         
         if(reloadOnFinishValue){
             location.reload();
