@@ -1,4 +1,4 @@
-# CDF Creater
+# CDF Creator
 
 Welcome! I created this application to help with my final year project. I needed to create CDF graphs for a bunch of data.
 
