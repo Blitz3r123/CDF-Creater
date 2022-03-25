@@ -10,13 +10,13 @@
   "author": "Kaleem Peeroo",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^8.1.1",
+    "electron": "^13.6.6",
     "electron-packager": "^14.2.1",
     "r-script": "0.0.4"
   },
   "dependencies": {
     "csv-parse": "^4.8.8",
-    "electron": "^8.1.1",
+    "electron": "^13.6.6",
     "electron-packager": "^14.2.1",
     "r-script": "0.0.4",
     "recursive-readdir": "^2.2.2"
